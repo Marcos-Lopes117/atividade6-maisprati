@@ -1,0 +1,52 @@
+.lojinhaContainer {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f4f6f8; /* Cor de fundo padrão */
+    transition: background-color 0.3s;
+  }
+  
+  /* Dark Mode 
+  .darkMode .lojinhaContainer {
+    background-color: #1a1a1a;
+  }*/
+  
+  /* O seletor global para o Dark Mode */
+:global(.dark-mode) .lojinhaContainer {
+  background-color: #1a1a1a;
+}
+
+  .productGrid {
+    display: grid;
+    gap: 24px;
+    padding: 24px;
+  }
+  
+  /* Breakpoints */
+  /* ≤ 480px: 1 col */
+  @media (max-width: 480px) {
+    .productGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* 481px – 768px: 2 cols */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .productGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* 769px – 1024px: 3 cols */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .productGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* ≥ 1025px: 4 cols */
+  @media (min-width: 1025px) {
+    .productGrid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }

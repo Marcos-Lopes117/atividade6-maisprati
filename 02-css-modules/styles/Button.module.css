@@ -1,0 +1,74 @@
+/* 02-css-modules/styles/Button.module.css */
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+/* Variante Solid */
+.btnSolid {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid transparent;
+}
+.btnSolid:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Variante Outline */
+.btnOutline {
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+.btnOutline:hover {
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Variante Ghost */
+.btnGhost {
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid transparent;
+}
+.btnGhost:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  box-shadow: none;
+}
+
+/* Estado Disabled */
+.btnDisabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background-color: #cccccc;
+  color: #666666;
+  border-color: #cccccc;
+}
+.btnDisabled:hover {
+  background-color: #cccccc;
+  color: #666666;
+  box-shadow: none;
+}
+
+:global(.dark-mode) .btnSolid {
+  background-color: #11005e;
+  border-color: #0056b3;
+}
+
+/* Dark Mode 
+.darkMode .btnSolid {
+  background-color: #0056b3;
+}*/
+
+/* Adicione as classes de dark mode para as outras variantes */

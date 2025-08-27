@@ -1,0 +1,93 @@
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Hover e Focus */
+  .product-card:hover,
+  .product-card:focus-within {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card:focus-within {
+    outline: 2px solid #007bff; /* Anel de foco visível */
+    outline-offset: 2px;
+  }
+  
+  /* Imagem do Produto */
+  .product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Mantém a proporção 1:1 */
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #f0f0f0; /* Placeholder visual */
+  }
+  
+  /* Informações do Produto */
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  
+  .product-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    height: 2.8em; /* Garante 2 linhas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita a 2 linhas */
+    -webkit-box-orient: vertical;
+  }
+  
+  .product-price {
+    font-size: 1.3rem;
+    color: #007bff;
+    font-weight: 600;
+  }
+  
+  .product-rating {
+    color: #ffc107; /* Cor das estrelas */
+    font-size: 1.2rem;
+  }
+  
+  .product-tag {
+    background-color: #28a745;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    align-self: flex-start;
+  }
+  
+  /* Estilos para o Dark Mode */
+  .dark-mode .product-card {
+    background-color: #343a40;
+    border-color: #495057;
+    color: #e9ecef;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dark-mode .product-card:hover,
+  .dark-mode .product-card:focus-within {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dark-mode .product-price {
+    color: #92d4ff;
+  }
+  
+  .dark-mode .product-tag {
+    background-color: #498528;
+  }

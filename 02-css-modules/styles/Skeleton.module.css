@@ -1,0 +1,87 @@
+/* 02-css-modules/styles/Skeleton.module.css */
+
+.skeletonCard {
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: pulse 1.5s infinite ease-in-out;
+  background-color: #f6f7f8;
+}
+
+/* Animação */
+@keyframes pulse {
+  0% {
+    background-color: #f6f7f8;
+  }
+  50% {
+    background-color: #e0e0e0;
+  }
+  100% {
+    background-color: #f6f7f8;
+  }
+}
+
+.skeletonImage {
+  width: 100%;
+  height: 200px;
+  background-color: #ccc;
+  border-radius: 8px;
+}
+
+.skeletonContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeletonLine {
+  height: 16px;
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.skeletonTitle {
+  width: 80%;
+}
+
+.skeletonPrice {
+  width: 40%;
+}
+
+.skeletonRating {
+  width: 30%;
+}
+
+.skeletonButton {
+  height: 38px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Estilos para o Dark Mode */
+:global(.dark-mode) .skeletonCard {
+  background-color: #333;
+  animation-name: pulse-dark;
+}
+
+:global(.dark-mode) .skeletonImage,
+:global(.dark-mode) .skeletonLine {
+  background-color: #555;
+}
+
+/* Animação para o Dark Mode */
+@keyframes pulse-dark {
+  0% {
+    background-color: #333;
+  }
+  50% {
+    background-color: #555;
+  }
+  100% {
+    background-color: #333;
+  }
+}

@@ -1,0 +1,82 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa; /* Tema claro */
+    color: #212529;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+
+  :global(.dark-mode) .navbar {
+    background-color: #212529;
+    color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .navbarLogo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbarActions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .themeToggleBtn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .cartBadge {
+    position: relative;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .cartCount {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+  }
+
+  .versionButtons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .versionButtons button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .versionButtons button:hover {
+    background-color: #eee;
+  }
+
+  :global(.dark-mode) .versionButtons button {
+    background-color: #343a40;
+    border-color: #495057;
+    color: #e9ecef;
+  }
+  
+  :global(.dark-mode) .versionButtons button:hover {
+    background-color: #495057;
+  }
