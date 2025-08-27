@@ -81,14 +81,23 @@ O projeto é organizado para manter cada versão da loja isolada.
 
 /lojinha
 ├── 01-css-global/          # Versão com CSS Global
+
 ├── 02-css-modules/         # Versão com CSS Modules
+
 ├── 03-tailwind/            # Versão com Tailwind CSS
+
 ├── 04-styled-components/   # Versão com Styled-components
+
 ├── src/
+
 │   ├── assets/             # Imagens e outros recursos
+
 │   ├── data/               # Dados mockados dos produtos
+
 │   ├── types/              # Definições de tipo (TypeScript)
+
 │   └── App.tsx             # Componente principal para alternar as versões
+
 └── ... (outros arquivos de configuração)
 
 ## 🎨 Como Alterar as Versões
